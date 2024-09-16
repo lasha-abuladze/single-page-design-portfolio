@@ -28,7 +28,10 @@ body {
       font-weight: 700;
       color: #FFF7F0;
       cursor: pointer;
+      transition: all 0.2s;
       background-color: Black; }
+      .header .logo-freeConsultation button:hover {
+        background-color: #755CDE; }
   .header h1 {
     font-size: 36px;
     font-weight: 700;
@@ -109,9 +112,12 @@ body {
     font-weight: 700;
     color: #FFF7F0;
     cursor: pointer;
+    transition: all 0.2s;
     background-color: #EB7565;
     margin-top: 24px;
     color: #FFF7F0; }
+    .section--2 button:hover {
+      background-color: #F6A560; }
 
 .section--3 {
   width: 100%;
@@ -128,7 +134,7 @@ body {
     position: absolute;
     width: calc(100% - 106px);
     height: 180px;
-    left: 53px;
+    left: calc((100% - (100% - 106px)) / 2);
     transition: all 0.5s; }
   .section--3 .arrow-buttons {
     margin-top: 240px;
@@ -143,21 +149,22 @@ body {
       border-radius: 50%;
       background: black;
       border: none;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.2s; }
+      .section--3 .arrow-buttons button:hover {
+        background-color: #755CDE; }
 
 .section--4 {
-  margin-top: 100px;
-  padding: 49px 24px;
-  box-sizing: border-box;
+  width: calc(100% - 32px);
   background-color: black;
+  margin: auto;
   border-radius: 10px;
-  color: #fff;
+  color: #FFF7F0;
+  padding: 49px 24px 48px 24px;
+  box-sizing: border-box;
   text-align: center; }
   .section--4 h3 {
     font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 24px; }
-  .section--4 p {
     margin-bottom: 24px; }
   .section--4 button {
     width: 176px;
@@ -169,9 +176,11 @@ body {
     font-weight: 700;
     color: #FFF7F0;
     cursor: pointer;
+    transition: all 0.2s;
     background-color: #EB7565;
-    margin-top: 24px;
-    color: #FFF7F0; }
+    margin-top: 24px; }
+    .section--4 button:hover {
+      background-color: #F6A560; }
 
 footer {
   margin-top: 40px;
@@ -194,7 +203,10 @@ footer {
     font-weight: 700;
     color: #FFF7F0;
     cursor: pointer;
+    transition: all 0.2s;
     background-color: Black; }
+    footer button:hover {
+      background-color: #755CDE; }
 
 @media only screen and (min-width: 768px) {
   .header .logo-freeConsultation {
@@ -209,6 +221,7 @@ footer {
       font-weight: 700;
       color: #FFF7F0;
       cursor: pointer;
+      transition: all 0.2s;
       background-color: Black; }
   .header h1 {
     font-size: 44px; }
@@ -273,28 +286,63 @@ footer {
       margin-top: 440px; }
   .section--4 {
     margin-top: 120px;
-    padding: 0px 40px;
-    background: none;
-    box-sizing: border-box;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center; }
-    .section--4 article {
-      padding: 56px 75px 64px 75px;
-      width: 100%;
-      border-radius: 10px;
-      background-color: black;
-      box-sizing: border-box; }
-    .section--4 h3 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 26px; }
-    .section--4 p {
-      font-size: 18px;
-      margin-bottom: 26px; }
-    .section--4 button {
-      margin: 0; }
+    padding: 56px 75px 64px 75px; }
   footer {
     margin-top: 56px;
     margin-bottom: 56px;
     padding: 0px 40px; } }
+
+@media only screen and (min-width: 1024px) {
+  .section--3 .slide {
+    position: absolute;
+    width: 540px;
+    height: 380px;
+    left: calc((100% - 540px) / 2);
+    transition: all 0.5s; } }
+
+@media only screen and (min-width: 1440px) {
+  p {
+    font-size: 18px; }
+  .header {
+    text-align: center;
+    padding: 38px 165px 0px 165px;
+    box-sizing: border-box; }
+    .header .logo-freeConsultation {
+      margin-bottom: 66px; }
+    .header h1 {
+      font-size: 56px;
+      margin-bottom: 23px;
+      padding: 0px; }
+    .header p {
+      padding: 0px 33px;
+      max-width: 730px; }
+  .section--1 {
+    margin-top: 80px;
+    padding: 0px 165px; }
+  .section--2 {
+    padding: 0px 165px;
+    margin-top: 136px;
+    justify-content: space-between; }
+    .section--2 img {
+      left: 0px; }
+    .section--2 h3 {
+      font-size: 40px;
+      margin-top: 0px; }
+  .section--4 {
+    max-width: 1110px;
+    margin-top: 88px;
+    padding: 81px 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between; }
+    .section--4 h3 {
+      font-size: 48px;
+      font-weight: 700; }
+    .section--4 article {
+      max-width: 540px; }
+  footer {
+    padding: 0px 165px;
+    margin-top: 56px;
+    margin-bottom: 64px; } }

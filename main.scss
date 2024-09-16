@@ -27,6 +27,7 @@ $mainFont: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
     color: #FFF7F0;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 p {
@@ -56,6 +57,10 @@ body {
         button {
             @include button-gen();
             background-color: Black;
+
+            &:hover {
+                background-color: #755CDE;
+            }
         }
 
 
@@ -172,6 +177,10 @@ body {
         background-color: #EB7565;
         margin-top: 24px;
         color: #FFF7F0;
+
+        &:hover {
+            background-color: #F6A560;
+        }
     }
 }
 
@@ -195,7 +204,7 @@ body {
         position: absolute;
         width: calc(100% - 106px);
         height: 180px;
-        left: 53px;
+        left: calc((100% - (100% - 106px)) / 2);
         transition: all 0.5s;
     }
     
@@ -212,39 +221,43 @@ body {
             background: black;
             border: none;
             cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: #755CDE;
+            }
         }
     }
 
 
 }
 
-
 .section--4 {
-    margin-top: 100px;
-    padding: 49px 24px;
-    box-sizing: border-box;
+    width: calc(100% - 32px);
     background-color: black;
+    margin: auto;
     border-radius: 10px;
-    color: #fff;
+    color: #FFF7F0;
+    padding: 49px 24px 48px 24px;
+    box-sizing: border-box;
     text-align: center;
 
     h3 {
         font-size: 26px;
-        font-weight: 700;
         margin-bottom: 24px;
     }
 
-    p {
-        margin-bottom: 24px;
-    }
-
-    button { 
+    button {
         @include button-gen();
         background-color: #EB7565;
         margin-top: 24px;
-        color: #FFF7F0;
+
+        &:hover {
+            background-color: #F6A560;
+        }
     }
 }
+
 
 footer {
     margin-top: 40px;
@@ -261,6 +274,10 @@ footer {
     button {
         @include button-gen();
         background-color: Black;
+        
+        &:hover {
+            background-color: #755CDE;
+        }
     }
 
 }
@@ -273,14 +290,11 @@ footer {
     .header {
 
         .logo-freeConsultation {
-            margin-bottom: 64px;
-    
+            margin-bottom: 64px;    
             button {
                 @include button-gen();
                 background-color: Black;
             }
-    
-    
         }
             
         h1 {
@@ -388,35 +402,7 @@ footer {
 
     .section--4 {
         margin-top: 120px;
-        padding: 0px 40px;
-        background: none;
-        box-sizing: border-box;
-        border-radius: 10px;
-        color: #fff;
-        text-align: center;
-
-        article {
-            padding: 56px 75px 64px 75px;
-            width: 100%;
-            border-radius: 10px;
-            background-color: black;
-            box-sizing: border-box;
-        }
-    
-        h3 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 26px;
-        }
-    
-        p {
-            font-size: 18px;
-            margin-bottom: 26px;
-        }
-    
-        button { 
-            margin: 0;
-        }
+        padding: 56px 75px 64px 75px;
     }
 
     footer {
@@ -431,4 +417,99 @@ footer {
     
     
 
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .section--3 {        
+        .slide {
+            position: absolute;
+            width: 540px;
+            height: 380px;
+            left: calc((100% - 540px) / 2);
+            transition: all 0.5s;
+        }   
+    
+    }
+    
+
+    
+}
+
+@media only screen and (min-width: 1440px) {
+
+    p {
+        font-size: 18px;
+    }
+
+    .header {
+        text-align: center;
+        padding: 38px 165px 0px 165px;
+        box-sizing: border-box;
+    
+        .logo-freeConsultation {
+            margin-bottom: 66px;       
+        }
+    
+        h1 {
+            font-size: 56px;
+            margin-bottom: 23px;
+            padding:0px;
+        }
+    
+        p {
+            padding: 0px 33px;
+            max-width: 730px;
+        }
+    
+    
+    }
+
+    .section--1 {
+        margin-top: 80px;
+        padding: 0px 165px;    
+    }
+
+    .section--2 {
+        padding: 0px 165px;
+        margin-top: 136px;
+        justify-content: space-between;
+    
+        img {
+            left: 0px;
+        }
+    
+        h3 {
+            font-size: 40px;
+            margin-top: 0px;
+        }
+    }
+
+    .section--4 {
+        max-width: 1110px;
+        margin-top: 88px;
+        padding: 81px 65px; 
+        @include flex-row();
+        text-align: left;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        article {
+            max-width: 540px;
+            
+        }
+    }
+
+    footer {
+        padding: 0px 165px;
+        margin-top: 56px;
+        margin-bottom: 64px;
+    }
+    
+    
 }
