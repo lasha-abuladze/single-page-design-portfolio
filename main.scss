@@ -167,7 +167,7 @@ body {
         margin-bottom: 24px;
     }
 
-    button {
+    button { 
         @include button-gen();
         background-color: #EB7565;
         margin-top: 24px;
@@ -215,6 +215,53 @@ body {
         }
     }
 
+
+}
+
+
+.section--4 {
+    margin-top: 100px;
+    padding: 49px 24px;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+
+    h3 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    button { 
+        @include button-gen();
+        background-color: #EB7565;
+        margin-top: 24px;
+        color: #FFF7F0;
+    }
+}
+
+footer {
+    margin-top: 40px;
+    margin-bottom: 32px;
+    @include flex-row();
+    justify-content: space-between;
+    padding: 0px 24px;
+
+    .logo {
+        width: 48px;
+        height: 48px
+    }
+
+    button {
+        @include button-gen();
+        background-color: Black;
+    }
 
 }
  
