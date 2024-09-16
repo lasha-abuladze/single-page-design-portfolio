@@ -99,3 +99,48 @@ body {
     line-height: normal;
     margin-top: 40px;
     margin-bottom: 24px; }
+  .section--2 button {
+    width: 176px;
+    height: 44px;
+    border: none;
+    background: none;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF7F0;
+    cursor: pointer;
+    background-color: #EB7565;
+    margin-top: 24px;
+    color: #FFF7F0; }
+
+.section--3 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  text-align: center; }
+  .section--3 h2 {
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 32px; }
+  .section--3 .slide {
+    position: absolute;
+    width: calc(100% - 106px);
+    height: 180px;
+    left: 53px;
+    transition: all 0.5s; }
+  .section--3 .arrow-buttons {
+    margin-top: 240px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; }
+    .section--3 .arrow-buttons button {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: black;
+      border: none;
+      cursor: pointer; }
